@@ -9,6 +9,22 @@ import org.springframework.web.client.RestClientException;
 @Component
 public class OpenMeteoClient {
 
+    private static final String CURRENT_WEATHER_FIELDS = String.join(",",
+            "temperature_2m",
+            "wind_speed_10m",
+            "relative_humidity_2m",
+            "wind_direction_10m",
+            "wind_gusts_10m",
+            "surface_pressure",
+            "pressure_msl",
+            "cloud_cover",
+            "snowfall",
+            "showers",
+            "rain",
+            "precipitation",
+            "apparent_temperature"
+    );
+
     private final RestClient restClient;
 
     public OpenMeteoClient() {
@@ -25,7 +41,7 @@ public class OpenMeteoClient {
                             .queryParam("latitude", latitude)
                             .queryParam("longitude", longitude)
                             .queryParam("timezone", "Europe/Berlin")
-                            .queryParam("current", "temperature_2m,wind_speed_10m")
+                            .queryParam("current", CURRENT_WEATHER_FIELDS)
                             .build())
                     .retrieve()
                     .body(OpenMeteoResponse.class);
