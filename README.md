@@ -41,10 +41,10 @@ http://localhost:8080/weather?latitude=57.052193&longitude=9.920227
 ```json
 {
   "time": "2026-04-27T12:00",
-  "temperature": "11.0 \u00b0C",
+  "temperature": "11.0 °C",
   "windSpeed": "11.9 km/h",
   "relativeHumidity": "51 %",
-  "windDirection": "93 \u00b0",
+  "windDirection": "93 °",
   "windGusts": "26.6 km/h",
   "surfacePressure": "1025.0 hPa",
   "pressureMsl": "1026.4 hPa",
@@ -53,7 +53,7 @@ http://localhost:8080/weather?latitude=57.052193&longitude=9.920227
   "showers": "0.0 mm",
   "rain": "0.0 mm",
   "precipitation": "0.0 mm",
-  "apparentTemperature": "8.0 \u00b0C"
+  "apparentTemperature": "8.0 °C"
 }
 ```
 
